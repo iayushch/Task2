@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>task2</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="image">
+            <img src="./images/shirt.jpg" alt="shirt-img">
+        </div>
+
+        <div class="functionality">
+            <h1>CLASSIC DENIM SHIRT</h1>
+
+            <div class="rating-review">
+                <div id="total-ratings">
+                    <!-- Here I will put the rating from the index.js file  -->
+                </div>
+                <p><span id="total-reviews">0</span> reviews</p>
+            </div>
+            
+
+            <div class="quantity">
+                <h2>QUANTITY</h2>
+                <div class="inc-dec">
+                    <button class="minus" id="plus-minus-btn">-</button>
+                    <span class="value">1</span>
+                    <button class="plus" id="plus-minus-btn">+</button>
+                </div>                
+                
+                
+            </div>
+
+            <div class="cod-check">
+                <h2>CHECK COD AVAILABILITY</h2>
+                <input id="pincodeInput" type="number" inputmode="numeric" oninput="limitInputLength(this)" placeholder="ENTER PINCODE" maxlength="6">
+                <button id="cod-check-btn" >CHECK</button>
+            </div>
+
+            <button id="add-to-cart">
+                ADD TO CART 
+                <span class="dot">.</span>
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <span id="price">0</span>
+            </button>
+
+            <div class="handles">
+                <a href="https://www.facebook.com/Recurpay.subscription/" class="facebook">
+                    <i class="fa-brands fa-facebook-f">
+                        <span>SHARE</span> 
+                    </i>
+                </a>
+                <a href="https://twitter.com/recurpay_io" class="twitter">
+                    <i class="fa-brands fa-twitter">
+                        <span>TWEET</span> 
+                    </i>
+                </a>
+                <a href="https://www.linkedin.com/company/recurpay/?originalSubdomain=in" class="pinterest">
+                    <i class="fa-brands fa-pinterest-p">
+                        <span>PIN</span>
+                    </i>
+                </a>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/74e651a849.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
