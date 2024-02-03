@@ -91,7 +91,7 @@ body {
     justify-content: center;
     align-items: center; 
     text-align: center;
-    width: ;
+    width: 100%;
 }
 
 #plus-minus-btn{
@@ -149,6 +149,13 @@ body {
     .image,
     .functionality {
         width: 100%;
+    }
+    .image-tag{
+        width: 200px;
+        height: 200px;
+    }
+    #pincodeInput{
+        width: 100px;
     }
 }
 
