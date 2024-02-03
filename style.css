@@ -121,6 +121,16 @@ body {
 }
 
 
+#add-to-cart:disabled {
+    background-color: rgb(195, 189, 189);
+    color: white;
+    cursor: not-allowed;
+
+}
+
+
+
+
 .rating-review {
     display: flex;
     justify-content: space-between;
@@ -129,4 +139,34 @@ body {
 .rating-review p {
     margin: 0;
     padding-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image,
+    .functionality {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+
+    .image,
+    .functionality {
+        width: 100%;
+    }
+
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
 }

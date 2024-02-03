@@ -2,7 +2,7 @@ const plus = document.querySelector('.plus')
 const minus = document.querySelector('.minus')
 const value = document.querySelector('.value')
 
-const pincodeInput = document.getElementById('cod-check');
+const pincodeInput = document.getElementById('cod-check-btn');
 const addToCart = document.getElementById('add-to-cart');
 
 const totalReviews = document.getElementById('total-reviews');  
@@ -21,6 +21,21 @@ const numberOfStars = 4;
 
 totalReviews.innerHTML = 23;
 price.innerHTML = '2,599';
+
+var canAddToCart = false;
+var addToCartButton = document.getElementById('add-to-cart');
+
+function enableAddToCart() {
+    canAddToCart = true;
+    addToCartButton.disabled = !canAddToCart;
+}
+
+function disableAddToCart() {
+    canAddToCart = false;
+    addToCartButton.disabled = !canAddToCart;
+}
+
+disableAddToCart()
 
 
  
@@ -75,24 +90,27 @@ pincodeInput.addEventListener('click', () => {
     if(enteredNumber.length !== 6) {
         alert('Please enter a valid 6-digit pincode!');
         verified = false;
+        disableAddToCart()
         return;
     }
 
     if (inValidNumbers.includes(enteredNumber)) {
         alert('Invalid 6-digit number!'); 
+        console.log('Invalid 6-digit number!');
+        disableAddToCart()
     }
     else {
         console.log('Valid 6-digit number!');
         verified = true;
+        enableAddToCart();
     }
 });
 
+
+document.getElementById('add-to-cart').disabled = true;
+
 addToCart.addEventListener('click', () => {
     
-    if(verified) {
-        alert('Added to cart!');
-    }
-    else {
-        alert('Please enter a valid pincode!');
-    }
+    alert('Added to cart!');
+    
 });
