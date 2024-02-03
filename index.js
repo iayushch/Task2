@@ -95,7 +95,7 @@ pincodeInput.addEventListener('click', () => {
     }
 
     if (inValidNumbers.includes(enteredNumber)) {
-        alert('Invalid 6-digit number!'); 
+        alert('“Sorry, You are not eligible for COD'); 
         console.log('Invalid 6-digit number!');
         disableAddToCart()
     }
